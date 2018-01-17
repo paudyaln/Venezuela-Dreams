@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AWSCore
+import AWSMobileClient
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
