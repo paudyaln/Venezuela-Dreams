@@ -12,6 +12,8 @@ class WelcomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("IT WORKED!")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
