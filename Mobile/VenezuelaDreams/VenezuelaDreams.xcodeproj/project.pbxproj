@@ -20,6 +20,7 @@
 		508639F9201A9CE800582920 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508639F7201A9CE800582920 /* LaunchScreen.storyboard */; };
 		50863A04201A9CE800582920 /* VenezuelaDreamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50863A03201A9CE800582920 /* VenezuelaDreamsTests.swift */; };
 		50863A0F201A9CE800582920 /* VenezuelaDreamsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50863A0E201A9CE800582920 /* VenezuelaDreamsUITests.swift */; };
+		50F03F9E201FA29300E85CA2 /* Child.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F03F9D201FA29300E85CA2 /* Child.xib */; };
 		623996E3B6E147B800A7B044 /* Pods_VenezuelaDreams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C818F4E1DBB088766A2626 /* Pods_VenezuelaDreams.framework */; };
 		924D406519A177ADD86385AE /* Pods_VenezuelaDreamsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DDF2FBDD4B662C243A5EE /* Pods_VenezuelaDreamsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		50863A0A201A9CE800582920 /* VenezuelaDreamsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenezuelaDreamsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50863A0E201A9CE800582920 /* VenezuelaDreamsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenezuelaDreamsUITests.swift; sourceTree = "<group>"; };
 		50863A10201A9CE800582920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50F03F9D201FA29300E85CA2 /* Child.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Child.xib; sourceTree = "<group>"; };
 		530904A7B153D000815312F1 /* Pods-VenezuelaDreamsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenezuelaDreamsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VenezuelaDreamsTests/Pods-VenezuelaDreamsTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F0425B9CEF8147F9AC2609F /* Pods-VenezuelaDreamsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenezuelaDreamsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VenezuelaDreamsUITests/Pods-VenezuelaDreamsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A57DDF2FBDD4B662C243A5EE /* Pods_VenezuelaDreamsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenezuelaDreamsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +129,7 @@
 				508639EE201A9CE800582920 /* AppDelegate.swift */,
 				508639F0201A9CE800582920 /* WelcomePageViewController.swift */,
 				50260319201EABB80070B5A7 /* Pages.xib */,
+				50F03F9D201FA29300E85CA2 /* Child.xib */,
 				5026031B201EAE870070B5A7 /* PagesView.swift */,
 				508639F2201A9CE800582920 /* Main.storyboard */,
 				50135624201A9FA80047EBF4 /* MainViewController.swift */,
@@ -300,6 +303,7 @@
 				50135628201D04550047EBF4 /* GoogleService-Info.plist in Resources */,
 				5026031A201EABB80070B5A7 /* Pages.xib in Resources */,
 				508639F6201A9CE800582920 /* Assets.xcassets in Resources */,
+				50F03F9E201FA29300E85CA2 /* Child.xib in Resources */,
 				508639F4201A9CE800582920 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,7 +639,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 398UP4MTHJ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VenezuelaDreams/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AndresPrato.VenezuelaDreams;
@@ -651,7 +655,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 398UP4MTHJ;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VenezuelaDreams/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AndresPrato.VenezuelaDreams;
