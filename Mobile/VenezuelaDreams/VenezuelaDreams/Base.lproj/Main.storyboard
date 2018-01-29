@@ -77,7 +77,9 @@
                                     <constraint firstAttribute="height" constant="30" id="p5p-wP-t72"/>
                                     <constraint firstAttribute="width" constant="343" id="wZd-Vv-uGM"/>
                                 </constraints>
-                                <state key="normal" title="Continue without login"/>
+                                <state key="normal" title="Continue without login">
+                                    <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93609589338302612" green="0.98042386770248413" blue="0.95917993783950806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

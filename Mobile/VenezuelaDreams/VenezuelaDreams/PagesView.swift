@@ -11,8 +11,9 @@ import UIKit
 class PagesView: UIView {
 
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var description_text: UITextView!
+    @IBOutlet weak var image: UIImageView!
     
-
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

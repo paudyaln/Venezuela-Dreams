@@ -18,9 +18,9 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    let about_us = ["title": "About us", "text": "It works!"]
-    let our_mission = ["title": "Our mission", "text": "Does it really?"]
-    let how_it_works = ["title": "How it works", "text": "It is!"]
+    let about_us = ["title": "About us", "text": "We are a platform that helps children in Venezuela eat their 3 meals a day. By receaving donations as little as 2$", "image": "andres"]
+    let our_mission = ["title": "Our mission", "text": "Our mission is to help children in Venezuela and help foundations raise money", "image": "jeff"]
+    let how_it_works = ["title": "How it works", "text": "You will select a child and then donate a amount of at leat 2$, between 1 week and 2 weeks you will receive a confirmation that the child received the food!", "image": "pascal"]
     var array_pages = [Dictionary<String, String>]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,8 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
         for (index, page) in array_pages.enumerated(){
             if let pageView = Bundle.main.loadNibNamed("Pages", owner: self, options: nil)?.first as? PagesView {
                 pageView.title.text = page["title"]
-                //pageView.description.text = page["text"]
+                pageView.description_text.text = page["text"]
+                pageView.image.image = UIImage(named: page["image"]!)
                 scrollView.addSubview(pageView)
                 pageView.frame.size.width = self.view.bounds.size.width
                 pageView.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
