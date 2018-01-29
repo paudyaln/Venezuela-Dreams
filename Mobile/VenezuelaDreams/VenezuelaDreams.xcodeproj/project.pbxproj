@@ -11,6 +11,8 @@
 		50135623201A9F610047EBF4 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50135622201A9F610047EBF4 /* LoginPageViewController.swift */; };
 		50135625201A9FA80047EBF4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50135624201A9FA80047EBF4 /* MainViewController.swift */; };
 		50135628201D04550047EBF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50135627201D04540047EBF4 /* GoogleService-Info.plist */; };
+		5026031A201EABB80070B5A7 /* Pages.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50260319201EABB80070B5A7 /* Pages.xib */; };
+		5026031C201EAE870070B5A7 /* PagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026031B201EAE870070B5A7 /* PagesView.swift */; };
 		508639EF201A9CE800582920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508639EE201A9CE800582920 /* AppDelegate.swift */; };
 		508639F1201A9CE800582920 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508639F0201A9CE800582920 /* WelcomePageViewController.swift */; };
 		508639F4201A9CE800582920 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 508639F2201A9CE800582920 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 		50135622201A9F610047EBF4 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		50135624201A9FA80047EBF4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		50135627201D04540047EBF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		50260319201EABB80070B5A7 /* Pages.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Pages.xib; sourceTree = "<group>"; };
+		5026031B201EAE870070B5A7 /* PagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesView.swift; sourceTree = "<group>"; };
 		508639EB201A9CE800582920 /* VenezuelaDreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenezuelaDreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		508639EE201A9CE800582920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		508639F0201A9CE800582920 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			children = (
 				508639EE201A9CE800582920 /* AppDelegate.swift */,
 				508639F0201A9CE800582920 /* WelcomePageViewController.swift */,
+				50260319201EABB80070B5A7 /* Pages.xib */,
+				5026031B201EAE870070B5A7 /* PagesView.swift */,
 				508639F2201A9CE800582920 /* Main.storyboard */,
 				50135624201A9FA80047EBF4 /* MainViewController.swift */,
 				50135622201A9F610047EBF4 /* LoginPageViewController.swift */,
@@ -292,6 +298,7 @@
 			files = (
 				508639F9201A9CE800582920 /* LaunchScreen.storyboard in Resources */,
 				50135628201D04550047EBF4 /* GoogleService-Info.plist in Resources */,
+				5026031A201EABB80070B5A7 /* Pages.xib in Resources */,
 				508639F6201A9CE800582920 /* Assets.xcassets in Resources */,
 				508639F4201A9CE800582920 /* Main.storyboard in Resources */,
 			);
@@ -459,6 +466,7 @@
 				50135623201A9F610047EBF4 /* LoginPageViewController.swift in Sources */,
 				508639F1201A9CE800582920 /* WelcomePageViewController.swift in Sources */,
 				508639EF201A9CE800582920 /* AppDelegate.swift in Sources */,
+				5026031C201EAE870070B5A7 /* PagesView.swift in Sources */,
 				50135625201A9FA80047EBF4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
