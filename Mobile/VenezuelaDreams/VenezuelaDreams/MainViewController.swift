@@ -10,59 +10,53 @@ import UIKit
 import FBSDKLoginKit
 import Firebase
 
-class MainViewController: UIViewController, FBSDKLoginButtonDelegate, UIScrollViewDelegate  {
+class MainViewController: UIViewController,UIScrollViewDelegate  {
+    
+    
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var donateButton: UIButton!
     
+    
     @IBOutlet weak var scrollView: UIScrollView!
-    var child_pages = [Dictionary<String, String>]()
+    var images = [UIImage]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpButtons()
+        images = [UIImage(named: "pascal")!,UIImage(named: "jeff")!,UIImage(named: "andres")!]
         setUpScroll()
-        loadPages()
+
+        loadImages()
+       
+        
+        
+    }
+
+    func loadImages(){
         // Do any additional setup after loading the view.
-    }
-
-    func setUpButtons(){
-
-    }
-    
-    func setUpScroll(){
+        for i in 0..<images.count {
+            let imageView = UIImageView()
+            let x = self.view.frame.size.width * CGFloat(i)
+            imageView.frame = CGRect(x: x, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = images[i]
+            scrollView.contentSize.width = scrollView.frame.size.width * CGFloat(i + 1)
+            scrollView.addSubview(imageView)
+        }
+        
         scrollView.isPagingEnabled = true
-        scrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(child_pages.count), height: 433)
+        
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.delegate = self
+        
     }
     
-    func loadPages(){
-        for (index, page) in child_pages.enumerated(){
-            if let pageView = Bundle.main.loadNibNamed("Pages", owner: self, options: nil)?.first as? PagesView {
-                pageView.title.text = page["title"]
-                //pageView.description.text = page["text"]
-                scrollView.addSubview(pageView)
-                pageView.frame.size.width = self.view.bounds.size.width
-                pageView.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
-            }
-        }
-    }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let page = scrollView.contentOffset.x / scrollView.frame.size.width
-        pageControl.currentPage = Int(page)
-    }
 
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    //Send back to welcome
-    @IBAction func sendBack(_ sender: UIButton) {
-        performSegueWithIdentifier("WelcomePageViewController", sender: self)
+
+    func setUpScroll(){
+
     }
     
     /*
