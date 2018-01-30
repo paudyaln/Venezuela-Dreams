@@ -11,11 +11,6 @@ import Firebase
 import FBSDKLoginKit
 
 class LoginPageViewController: UIViewController {
-
-    @IBOutlet weak var loginButtonFB: FBSDKLoginButton!
-    
-    @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +92,10 @@ class LoginPageViewController: UIViewController {
             }
             print("Saved user succesfully into db")
         })
+    }
+    
+    @IBAction func cancelButtonHandle(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil);
     }
     
     func doSegue(){

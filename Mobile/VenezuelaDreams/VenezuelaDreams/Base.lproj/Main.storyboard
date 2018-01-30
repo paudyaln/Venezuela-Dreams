@@ -131,7 +131,38 @@
                     <view key="view" contentMode="scaleToFill" id="Qyh-yf-VQi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="angel-falls" translatesAutoresizingMaskIntoConstraints="NO" id="pEx-Vb-fx0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbf-fd-1KD">
+                                <rect key="frame" x="81" y="73" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzX-QC-hO4">
+                                <rect key="frame" x="237" y="73" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Up"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtF-PW-FGa">
+                                <rect key="frame" x="16" y="20" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.97763019800186157" green="0.26332145929336548" blue="0.01953745074570179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonHandle:" destination="SJO-9o-ixl" eventType="touchUpInside" id="OD6-Wq-eed"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pEx-Vb-fx0" firstAttribute="bottom" secondItem="K4u-wW-KJe" secondAttribute="bottom" id="FZ7-3S-UOV"/>
+                            <constraint firstItem="pEx-Vb-fx0" firstAttribute="trailing" secondItem="K4u-wW-KJe" secondAttribute="trailing" id="ZzG-sf-5KC"/>
+                            <constraint firstItem="pEx-Vb-fx0" firstAttribute="leading" secondItem="K4u-wW-KJe" secondAttribute="leading" id="kNi-Nb-hnW"/>
+                            <constraint firstItem="pEx-Vb-fx0" firstAttribute="top" secondItem="Qyh-yf-VQi" secondAttribute="top" id="lE6-xA-JUg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="K4u-wW-KJe"/>
                     </view>
                 </viewController>
@@ -169,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEs-Ab-V0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="576.79999999999995" y="133.5832083958021"/>
+            <point key="canvasLocation" x="766" y="148"/>
         </scene>
     </scenes>
     <resources>
