@@ -147,6 +147,9 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
         })
     }
     
+    @IBAction func continueWithoutSignIn(_ sender: Any) {
+        doSegue()
+    }
     func doSegue(){
         self.performSegue(withIdentifier: "redirectAfterLoginFB", sender: self)
     }
