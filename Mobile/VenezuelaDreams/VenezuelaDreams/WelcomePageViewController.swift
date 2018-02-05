@@ -53,7 +53,7 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
     
     func loadPages(){
         for (index, page) in array_pages.enumerated(){
-            if let pageView = Bundle.main.loadNibNamed("Pages", owner: self, options: nil)?.first as? PagesView {
+            /*if let pageView = Bundle.main.loadNibNamed("Pages", owner: self, options: nil)?.first as? PagesView {
                 pageView.title.text = page["title"]
                 pageView.description_text.text = page["text"]
                 pageView.image.image = UIImage(named: page["image"]!)
@@ -61,6 +61,22 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
                 pageView.frame.size.width = self.view.bounds.size.width
                 pageView.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
             }
+ */
+            let card = CardHighlight(frame: CGRect(x: 10, y: 30, width: 200 , height: 240))
+            card.backgroundColor = UIColor(red: 0, green: 94/255, blue: 112/255, alpha: 1)
+            //card.icon = UIImage(named: "flappy")
+            card.title = page["title"]!
+            card.itemTitle = "Flappy Bird"
+            card.itemSubtitle = "Flap That !"
+            card.textColor = UIColor.white
+            card.hasParallax = true
+            
+            //let cardContentVC = storyboard!.instantiateViewController(withIdentifier: "CardContent")
+            //card.shouldPresent(cardContentVC, from: self, fullscreen: false)
+            
+            scrollView.addSubview(card)
+            //card.frame.size.width = self.view.bounds.size.width
+            card.frame.origin.x = CGFloat(index) * self.scrollView.bounds.size.width
         }
     }
     

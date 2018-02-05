@@ -128,6 +128,40 @@
             </objects>
             <point key="canvasLocation" x="-351.19999999999999" y="133.5832083958021"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="81O-FF-1FA">
+            <objects>
+                <viewController id="QJf-cU-nMl" customClass="TestViewController" customModule="VenezuelaDreams" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QUs-1W-uRL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bql-qJ-Wem" customClass="CardHighlight" customModule="VenezuelaDreams">
+                                <rect key="frame" x="67" y="20" width="240" height="318"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="318" id="NHc-8w-OWD"/>
+                                    <constraint firstAttribute="width" constant="240" id="fgX-3I-BTw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bql-qJ-Wem" firstAttribute="leading" secondItem="7X6-4n-SXc" secondAttribute="leading" constant="67" id="fM3-Wr-G7v"/>
+                            <constraint firstItem="Bql-qJ-Wem" firstAttribute="top" secondItem="7X6-4n-SXc" secondAttribute="top" id="gz0-fy-7oS"/>
+                            <constraint firstItem="7X6-4n-SXc" firstAttribute="trailing" secondItem="Bql-qJ-Wem" secondAttribute="trailing" constant="68" id="w0G-H6-cMz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7X6-4n-SXc"/>
+                    </view>
+                    <connections>
+                        <outlet property="testCard" destination="Bql-qJ-Wem" id="0PT-IF-7qk"/>
+                        <outlet property="testView" destination="QUs-1W-uRL" id="kLs-N7-Vic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KvV-t2-n2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900" y="-620.23988005997012"/>
+        </scene>
         <!--Login Page View Controller-->
         <scene sceneID="8HH-Ce-pZH">
             <objects>

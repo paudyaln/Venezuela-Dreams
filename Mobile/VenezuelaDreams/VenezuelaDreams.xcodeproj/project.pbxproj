@@ -21,6 +21,19 @@
 		50863A04201A9CE800582920 /* VenezuelaDreamsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50863A03201A9CE800582920 /* VenezuelaDreamsTests.swift */; };
 		50863A0F201A9CE800582920 /* VenezuelaDreamsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50863A0E201A9CE800582920 /* VenezuelaDreamsUITests.swift */; };
 		50F03F9E201FA29300E85CA2 /* Child.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50F03F9D201FA29300E85CA2 /* Child.xib */; };
+		50F214E22027A0C70027BE44 /* Cards in Resources */ = {isa = PBXBuildFile; fileRef = 50F214E12027A0C60027BE44 /* Cards */; };
+		50F2150A2027A3150027BE44 /* Cards in Sources */ = {isa = PBXBuildFile; fileRef = 50F214E12027A0C60027BE44 /* Cards */; };
+		50F215152027A33C0027BE44 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2150B2027A3360027BE44 /* Card.swift */; };
+		50F215162027A33C0027BE44 /* CardHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2150C2027A3370027BE44 /* CardHighlight.swift */; };
+		50F215172027A33C0027BE44 /* CardPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2150D2027A3370027BE44 /* CardPlayer.swift */; };
+		50F215182027A33C0027BE44 /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2150E2027A3380027BE44 /* LayoutHelper.swift */; };
+		50F215192027A33C0027BE44 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2150F2027A3390027BE44 /* Animator.swift */; };
+		50F2151A2027A33C0027BE44 /* CardGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F215102027A3390027BE44 /* CardGroup.swift */; };
+		50F2151B2027A33C0027BE44 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F215112027A33A0027BE44 /* DetailViewController.swift */; };
+		50F2151C2027A33C0027BE44 /* CardArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F215122027A33B0027BE44 /* CardArticle.swift */; };
+		50F2151D2027A33C0027BE44 /* Player_by_Patric_Piemonte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F215132027A33B0027BE44 /* Player_by_Patric_Piemonte.swift */; };
+		50F2151E2027A33C0027BE44 /* CardGroupSliding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F215142027A33C0027BE44 /* CardGroupSliding.swift */; };
+		50F215202027A6400027BE44 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F2151F2027A6400027BE44 /* TestViewController.swift */; };
 		623996E3B6E147B800A7B044 /* Pods_VenezuelaDreams.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C818F4E1DBB088766A2626 /* Pods_VenezuelaDreams.framework */; };
 		924D406519A177ADD86385AE /* Pods_VenezuelaDreamsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DDF2FBDD4B662C243A5EE /* Pods_VenezuelaDreamsUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +78,18 @@
 		50863A0E201A9CE800582920 /* VenezuelaDreamsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenezuelaDreamsUITests.swift; sourceTree = "<group>"; };
 		50863A10201A9CE800582920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50F03F9D201FA29300E85CA2 /* Child.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Child.xib; sourceTree = "<group>"; };
+		50F214E12027A0C60027BE44 /* Cards */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cards; sourceTree = "<group>"; };
+		50F2150B2027A3360027BE44 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		50F2150C2027A3370027BE44 /* CardHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHighlight.swift; sourceTree = "<group>"; };
+		50F2150D2027A3370027BE44 /* CardPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlayer.swift; sourceTree = "<group>"; };
+		50F2150E2027A3380027BE44 /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
+		50F2150F2027A3390027BE44 /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		50F215102027A3390027BE44 /* CardGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroup.swift; sourceTree = "<group>"; };
+		50F215112027A33A0027BE44 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		50F215122027A33B0027BE44 /* CardArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardArticle.swift; sourceTree = "<group>"; };
+		50F215132027A33B0027BE44 /* Player_by_Patric_Piemonte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player_by_Patric_Piemonte.swift; sourceTree = "<group>"; };
+		50F215142027A33C0027BE44 /* CardGroupSliding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroupSliding.swift; sourceTree = "<group>"; };
+		50F2151F2027A6400027BE44 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		530904A7B153D000815312F1 /* Pods-VenezuelaDreamsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenezuelaDreamsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VenezuelaDreamsTests/Pods-VenezuelaDreamsTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F0425B9CEF8147F9AC2609F /* Pods-VenezuelaDreamsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenezuelaDreamsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VenezuelaDreamsUITests/Pods-VenezuelaDreamsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A57DDF2FBDD4B662C243A5EE /* Pods_VenezuelaDreamsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenezuelaDreamsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,14 +151,26 @@
 		508639ED201A9CE800582920 /* VenezuelaDreams */ = {
 			isa = PBXGroup;
 			children = (
+				50F214E12027A0C60027BE44 /* Cards */,
 				508639EE201A9CE800582920 /* AppDelegate.swift */,
 				508639F0201A9CE800582920 /* WelcomePageViewController.swift */,
 				50260319201EABB80070B5A7 /* Pages.xib */,
 				50F03F9D201FA29300E85CA2 /* Child.xib */,
 				5026031B201EAE870070B5A7 /* PagesView.swift */,
 				508639F2201A9CE800582920 /* Main.storyboard */,
+				50F2151F2027A6400027BE44 /* TestViewController.swift */,
 				50135624201A9FA80047EBF4 /* MainViewController.swift */,
 				50135622201A9F610047EBF4 /* LoginPageViewController.swift */,
+				50F2150F2027A3390027BE44 /* Animator.swift */,
+				50F2150B2027A3360027BE44 /* Card.swift */,
+				50F215122027A33B0027BE44 /* CardArticle.swift */,
+				50F215102027A3390027BE44 /* CardGroup.swift */,
+				50F215142027A33C0027BE44 /* CardGroupSliding.swift */,
+				50F2150C2027A3370027BE44 /* CardHighlight.swift */,
+				50F2150D2027A3370027BE44 /* CardPlayer.swift */,
+				50F215112027A33A0027BE44 /* DetailViewController.swift */,
+				50F2150E2027A3380027BE44 /* LayoutHelper.swift */,
+				50F215132027A33B0027BE44 /* Player_by_Patric_Piemonte.swift */,
 				508639F5201A9CE800582920 /* Assets.xcassets */,
 				508639F7201A9CE800582920 /* LaunchScreen.storyboard */,
 				50135627201D04540047EBF4 /* GoogleService-Info.plist */,
@@ -304,6 +341,7 @@
 				5026031A201EABB80070B5A7 /* Pages.xib in Resources */,
 				508639F6201A9CE800582920 /* Assets.xcassets in Resources */,
 				50F03F9E201FA29300E85CA2 /* Child.xib in Resources */,
+				50F214E22027A0C70027BE44 /* Cards in Resources */,
 				508639F4201A9CE800582920 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,10 +505,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50F2151B2027A33C0027BE44 /* DetailViewController.swift in Sources */,
+				50F215172027A33C0027BE44 /* CardPlayer.swift in Sources */,
+				50F215202027A6400027BE44 /* TestViewController.swift in Sources */,
+				50F2151E2027A33C0027BE44 /* CardGroupSliding.swift in Sources */,
+				50F2151D2027A33C0027BE44 /* Player_by_Patric_Piemonte.swift in Sources */,
+				50F2151A2027A33C0027BE44 /* CardGroup.swift in Sources */,
+				50F215182027A33C0027BE44 /* LayoutHelper.swift in Sources */,
+				50F215162027A33C0027BE44 /* CardHighlight.swift in Sources */,
+				50F2150A2027A3150027BE44 /* Cards in Sources */,
 				50135623201A9F610047EBF4 /* LoginPageViewController.swift in Sources */,
+				50F215152027A33C0027BE44 /* Card.swift in Sources */,
 				508639F1201A9CE800582920 /* WelcomePageViewController.swift in Sources */,
 				508639EF201A9CE800582920 /* AppDelegate.swift in Sources */,
 				5026031C201EAE870070B5A7 /* PagesView.swift in Sources */,
+				50F215192027A33C0027BE44 /* Animator.swift in Sources */,
+				50F2151C2027A33C0027BE44 /* CardArticle.swift in Sources */,
 				50135625201A9FA80047EBF4 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
