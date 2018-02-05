@@ -62,12 +62,13 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
                 pageView.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
             }
  */
-            let card = CardHighlight(frame: CGRect(x: 10, y: 30, width: 200 , height: 240))
+            let card = CardHighlight(frame: CGRect(x: 10, y: 30, width: self.loginButton.bounds.width , height: self.scrollView.bounds.height))
             card.backgroundColor = UIColor(red: 0, green: 94/255, blue: 112/255, alpha: 1)
             //card.icon = UIImage(named: "flappy")
             card.title = page["title"]!
             card.itemTitle = "Flappy Bird"
             card.itemSubtitle = "Flap That !"
+            card.backgroundImage = UIImage(named: page["image"]!)
             card.textColor = UIColor.white
             card.hasParallax = true
             
@@ -75,8 +76,14 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
             //card.shouldPresent(cardContentVC, from: self, fullscreen: false)
             
             scrollView.addSubview(card)
+            
             //card.frame.size.width = self.view.bounds.size.width
-            card.frame.origin.x = CGFloat(index) * self.scrollView.bounds.size.width
+            if (index == 0){
+                card.frame.origin.x = (self.view.bounds.width - self.loginButton.bounds.width) / 2
+            } else {
+            card.frame.origin.x = (CGFloat(index) * self.scrollView.bounds.width) + ((self.view.bounds.width - self.loginButton.bounds.width) / 2)
+            }
+            card.frame.origin.y = 0
         }
     }
     
