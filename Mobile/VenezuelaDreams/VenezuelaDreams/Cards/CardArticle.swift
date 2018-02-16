@@ -44,10 +44,21 @@ import UIKit
         }
     }
 
+    /**
+     Style for the blur effect.
+     */
+    @IBInspectable public var blurEffect: UIBlurEffectStyle = .extraLight {
+        didSet{
+            blurV.effect = UIBlurEffect(style: blurEffect)
+        }
+    }
+    
     //Priv Vars
     var titleLbl = UILabel ()
     var subtitleLbl = UILabel()
     var categoryLbl = UILabel()
+    var blurV = UIVisualEffectView()
+    var vibrancyV = UIVisualEffectView()
     
     // View Life Cycle
     override public init(frame: CGRect) {
@@ -59,12 +70,15 @@ import UIKit
         initialize()
     }
     
-    override  func initialize() {
+    override func initialize() {
         super.initialize()
         
+        vibrancyV = UIVisualEffectView(effect: UIVibrancyEffect(blurEffect: UIBlurEffect(style: blurEffect)))
+        backgroundIV.addSubview(blurV)
         backgroundIV.addSubview(titleLbl)
         backgroundIV.addSubview(subtitleLbl)
         backgroundIV.addSubview(categoryLbl)
+        
     }
     
     
@@ -74,7 +88,7 @@ import UIKit
         super.draw(rect)
         
         categoryLbl.text = category.uppercased()
-        categoryLbl.textColor = textColor.withAlphaComponent(0.3)
+        categoryLbl.textColor = textColor
         categoryLbl.font = UIFont.systemFont(ofSize: 100, weight: .bold)
         categoryLbl.shadowColor = UIColor.black
         categoryLbl.shadowOffset = CGSize.zero
@@ -103,6 +117,9 @@ import UIKit
         subtitleLbl.numberOfLines = 0
         subtitleLbl.textAlignment = .left
      
+        let blur = UIBlurEffect(style: blurEffect)
+        blurV.effect = blur
+        
         self.layout()
         
     }
@@ -111,6 +128,13 @@ import UIKit
         super.layout(animating: animating)
         
         let gimme  = LayoutHelper(rect: backgroundIV.bounds)
+        
+        blurV.frame = CGRect(x: 0,
+                             y: gimme.RevY(0, height: gimme.Y(14)) - insets,
+                             width: gimme.X(100),
+                             height: gimme.Y(42))
+        
+        vibrancyV.frame = blurV.frame
         
         categoryLbl.frame = CGRect(x: insets,
                                    y: insets,
@@ -124,8 +148,10 @@ import UIKit
         
         subtitleLbl.frame = CGRect(x: insets,
                                    y: gimme.RevY(0, height: gimme.Y(14)) - insets,
-                                   width: gimme.X(80),
+                                   width: gimme.X(90),
                                    height: gimme.Y(14))
+        
+        vibrancyV.frame = blurV.frame
         titleLbl.sizeToFit()
     }
     

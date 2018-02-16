@@ -72,9 +72,9 @@ internal class DetailViewController: UIViewController {
         
         originalFrame = scrollView.frame
         
-        if isFullscreen {
+        //if isFullscreen {
             view.addSubview(xButton)
-        }
+        //}
         
         view.insertSubview(snap, belowSubview: blurView)
         

@@ -18,10 +18,11 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    let about_us = ["title": "About us", "text": "We are a team that helps children in Venezuela eat their 3 meals a day. By receaving donations as little as 2$", "image": "andres"]
-    let our_mission = ["title": "Our mission", "text": "Our mission is to help children in Venezuela and help foundations raise money", "image": "jeff"]
-    let how_it_works = ["title": "How it works", "text": "You will select a child and then donate a amount of at leat 2$, between 1 week and 2 weeks you will receive a confirmation that the child received the food!", "image": "pascal"]
+    let about_us = ["title": "About us", "text": "We are a team that helps children in Venezuela eat their 3 meals a day. By receaving donations as little as 2$", "image": "delta2"]
+    let our_mission = ["title": "Our mission", "text": "Our mission is to help children in Venezuela and help foundations raise money", "image": "delta1"]
+    let how_it_works = ["title": "How it works", "text": "Select a child and then donate a amount of at leat 2$, between 1 week and 2 weeks you will receive a confirmation that the child received the food!", "image": "delta3"]
     var array_pages = [Dictionary<String, String>]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,9 +30,14 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
         //checkUserIsLogged()
         setUpButtons()
         setUpScroll()
+    }
+    
+    //This happens after the autolayout is done. So, any calculation done with autolayout number, it has to occur here
+    override func viewDidAppear(_ animated: Bool) {
         loadPages()
     }
 
+    //Set buttons of the view
     func setUpButtons(){
         loginButtonFB.delegate = self
         loginButtonFB.readPermissions = ["email", "public_profile"]
@@ -44,54 +50,54 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
         continueButton.layer.borderWidth = 0
     }
     
+    //Set scrollView
     func setUpScroll(){
         scrollView.isPagingEnabled = true
-        scrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(array_pages.count), height: 433)
+        scrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(array_pages.count), height: self.scrollView.bounds.height)
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.delegate = self
     }
     
+    //Load the three cards in the view
     func loadPages(){
         for (index, page) in array_pages.enumerated(){
-            /*if let pageView = Bundle.main.loadNibNamed("Pages", owner: self, options: nil)?.first as? PagesView {
-                pageView.title.text = page["title"]
-                pageView.description_text.text = page["text"]
-                pageView.image.image = UIImage(named: page["image"]!)
-                scrollView.addSubview(pageView)
-                pageView.frame.size.width = self.view.bounds.size.width
-                pageView.frame.origin.x = CGFloat(index) * self.view.bounds.size.width
-            }
- */
-            let card = CardHighlight(frame: CGRect(x: 10, y: 30, width: self.loginButton.bounds.width , height: self.scrollView.bounds.height))
+            let card = CardArticle(frame: CGRect(x: 10, y: 30, width: self.loginButton.bounds.width , height: self.scrollView.bounds.height))
             card.backgroundColor = UIColor(red: 0, green: 94/255, blue: 112/255, alpha: 1)
             //card.icon = UIImage(named: "flappy")
-            card.title = page["title"]!
-            card.itemTitle = "Flappy Bird"
-            card.itemSubtitle = "Flap That !"
+            card.category = page["title"]!
+            card.categoryLbl.textColor = UIColor.white
+            card.title = ""
+            card.subtitle = page["text"]!
+            card.blurEffect = .light
+            //card.itemTitle = "Flappy Bird"
+            //card.itemSubtitle = "Flap That !"
             card.backgroundImage = UIImage(named: page["image"]!)
             card.textColor = UIColor.white
             card.hasParallax = true
-            
-            //let cardContentVC = storyboard!.instantiateViewController(withIdentifier: "CardContent")
-            //card.shouldPresent(cardContentVC, from: self, fullscreen: false)
+            let cardContentVC = storyboard!.instantiateViewController(withIdentifier: "CardContent")
+            card.shouldPresent(cardContentVC, from: self, fullscreen: false)
             
             scrollView.addSubview(card)
             
-            //card.frame.size.width = self.view.bounds.size.width
+            //set origin of x coordinate for the card
             if (index == 0){
                 card.frame.origin.x = (self.view.bounds.width - self.loginButton.bounds.width) / 2
             } else {
             card.frame.origin.x = (CGFloat(index) * self.scrollView.bounds.width) + ((self.view.bounds.width - self.loginButton.bounds.width) / 2)
             }
+            //set origin of the y coordinate for the card
+            
             card.frame.origin.y = 0
         }
     }
     
+    //Change the page number
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let page = scrollView.contentOffset.x / scrollView.frame.size.width
         pageControl.currentPage = Int(page)
     }
     
+    //Check if there is an user logged in to redirect
     func checkUserIsLogged(){
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             
@@ -181,7 +187,9 @@ class WelcomePageViewController: UIViewController, FBSDKLoginButtonDelegate, UIS
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
